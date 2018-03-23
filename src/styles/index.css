@@ -1,0 +1,99 @@
+@media (max-width: 767px) {
+    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+    body {
+        padding-top: 50px;
+    }
+}
+:root {
+    --top-menu-height: 4em;
+}
+
+.top-menu {
+    height: var(--top-menu-height);
+}
+.grid {
+    width: 100%;
+    display: grid;
+    grid: var(--top-menu-height) / 1fr;
+    grid-template-areas:  "menu"
+                          "maincontent";
+    min-height: 100vh;
+}
+
+.menu {
+    grid-area: menu;
+    z-index: 100;
+}
+
+.main-content {
+    grid-area: maincontent;
+    background-color: #f9fafb;
+}
+
+.parent {
+    display: inline-flex;
+}
+
+.side {
+    transition: width 0.3s;
+    width: 14em !important;
+    overflow: hidden;
+    padding-top: var(--top-menu-height);
+    z-index: 99;
+}
+
+.small-side {
+    width: 4em !important;
+    flex-basis: 4em;
+}
+
+.content {
+    position: absolute;
+    right: 0;
+    transition: all 0.3s;
+    padding: 10px;
+    width: calc(100% - 14em);
+}
+
+.small-content {
+    padding: 10px;
+    width: calc(100% - 4em);
+}
+
+.logo-space-menu-item {
+    width: 14em;
+}
+
+.display-inline {
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo-space {
+    font-family: "Roboto Light", serif;
+    font-size: 24px;
+    margin: 0 auto;
+
+}
+
+.logo-space img, .display-inline img {
+    margin-right: 8px;
+}
+
+.no-border::before {
+    display: none;
+}
+.top-menu i.icon
+{
+    margin: 0 !important;
+}
+
+
+.drop-left-padding{
+    padding-left: 0 !important;
+}
+
+.label-on-corner {
+    top: 0.8em !important;
+    left: 78% !important;
+}

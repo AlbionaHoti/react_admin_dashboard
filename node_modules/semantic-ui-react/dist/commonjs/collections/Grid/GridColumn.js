@@ -1,0 +1,116 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends2 = require('babel-runtime/helpers/extends');
+
+var _extends3 = _interopRequireDefault(_extends2);
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _lib = require('../../lib');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * A column sub-component for Grid.
+ */
+function GridColumn(props) {
+  var children = props.children,
+      className = props.className,
+      computer = props.computer,
+      color = props.color,
+      floated = props.floated,
+      largeScreen = props.largeScreen,
+      mobile = props.mobile,
+      only = props.only,
+      stretched = props.stretched,
+      tablet = props.tablet,
+      textAlign = props.textAlign,
+      verticalAlign = props.verticalAlign,
+      widescreen = props.widescreen,
+      width = props.width;
+
+
+  var classes = (0, _classnames2.default)(color, (0, _lib.useKeyOnly)(stretched, 'stretched'), (0, _lib.useMultipleProp)(only, 'only'), (0, _lib.useTextAlignProp)(textAlign), (0, _lib.useValueAndKey)(floated, 'floated'), (0, _lib.useVerticalAlignProp)(verticalAlign), (0, _lib.useWidthProp)(computer, 'wide computer'), (0, _lib.useWidthProp)(largeScreen, 'wide large screen'), (0, _lib.useWidthProp)(mobile, 'wide mobile'), (0, _lib.useWidthProp)(tablet, 'wide tablet'), (0, _lib.useWidthProp)(widescreen, 'wide widescreen'), (0, _lib.useWidthProp)(width, 'wide'), 'column', className);
+  var rest = (0, _lib.getUnhandledProps)(GridColumn, props);
+  var ElementType = (0, _lib.getElementType)(GridColumn, props);
+
+  return _react2.default.createElement(
+    ElementType,
+    (0, _extends3.default)({}, rest, { className: classes }),
+    children
+  );
+}
+
+GridColumn.handledProps = ['as', 'children', 'className', 'color', 'computer', 'floated', 'largeScreen', 'mobile', 'only', 'stretched', 'tablet', 'textAlign', 'verticalAlign', 'widescreen', 'width'];
+GridColumn._meta = {
+  name: 'GridColumn',
+  parent: 'Grid',
+  type: _lib.META.TYPES.COLLECTION
+};
+
+GridColumn.propTypes = process.env.NODE_ENV !== "production" ? {
+  /** An element type to render as (string or function). */
+  as: _lib.customPropTypes.as,
+
+  /** Primary content. */
+  children: _propTypes2.default.node,
+
+  /** Additional classes. */
+  className: _propTypes2.default.string,
+
+  /** A grid column can be colored. */
+  color: _propTypes2.default.oneOf(_lib.SUI.COLORS),
+
+  /** A column can specify a width for a computer. */
+  computer: _propTypes2.default.oneOf(_lib.SUI.WIDTHS),
+
+  /** A column can sit flush against the left or right edge of a row. */
+  floated: _propTypes2.default.oneOf(_lib.SUI.FLOATS),
+
+  /** A column can specify a width for a large screen device. */
+  largeScreen: _propTypes2.default.oneOf(_lib.SUI.WIDTHS),
+
+  /** A column can specify a width for a mobile device. */
+  mobile: _propTypes2.default.oneOf(_lib.SUI.WIDTHS),
+
+  /** A column can appear only for a specific device, or screen sizes. */
+  only: _lib.customPropTypes.multipleProp(_lib.SUI.VISIBILITY),
+
+  /** A column can stretch its contents to take up the entire grid or row height. */
+  stretched: _propTypes2.default.bool,
+
+  /** A column can specify a width for a tablet device. */
+  tablet: _propTypes2.default.oneOf(_lib.SUI.WIDTHS),
+
+  /** A column can specify its text alignment. */
+  textAlign: _propTypes2.default.oneOf(_lib.SUI.TEXT_ALIGNMENTS),
+
+  /** A column can specify its vertical alignment to have all its columns vertically centered. */
+  verticalAlign: _propTypes2.default.oneOf(_lib.SUI.VERTICAL_ALIGNMENTS),
+
+  /** A column can specify a width for a wide screen device. */
+  widescreen: _propTypes2.default.oneOf(_lib.SUI.WIDTHS),
+
+  /** Represents width of column. */
+  width: _propTypes2.default.oneOf(_lib.SUI.WIDTHS)
+} : {};
+
+GridColumn.create = (0, _lib.createShorthandFactory)(GridColumn, function (children) {
+  return { children: children };
+});
+
+exports.default = GridColumn;
