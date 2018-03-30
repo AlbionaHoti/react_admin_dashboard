@@ -10,7 +10,7 @@ cd react_admin_dashboard
 In the project directory, you can run:
 
 ```
-### `npm start`
+`npm start`
 
 Project [Demo](http://albionahoti.com/react_admin_dashboard/) 
 
