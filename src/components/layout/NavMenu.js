@@ -8,7 +8,7 @@ export default props => (
   <Navbar inverse fixedTop fluid collapseOnSelect>
     <Navbar.Header>
       <Navbar.Brand>
-        <Link to={'/'}>Ferpoli_jsx</Link>
+        <Link to={'/'}>React Admin Dashboard</Link>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
