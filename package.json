@@ -7,14 +7,14 @@
     "bootstrap": "^3.3.7",
     "file-loader": "^1.1.9",
     "prop-types": "latest",
-    "react": "^16.0.0",
+    "react": "^16.4.2",
     "react-bootstrap": "^0.31.5",
-    "react-dom": "^16.0.0",
+    "react-dom": "^16.4.2",
     "react-redux": "^5.0.6",
     "react-router-bootstrap": "^0.24.4",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.8",
-    "react-scripts": "^1.0.17",
+    "react-scripts": "^1.1.4",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "rimraf": "^2.6.2",
@@ -28,9 +28,16 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "@storybook/addon-actions": "^3.4.8",
+    "@storybook/addon-links": "^3.4.8",
+    "@storybook/addon-notes": "^3.4.8",
+    "@storybook/addons": "^3.4.8",
+    "@storybook/react": "^3.4.8",
+    "babel-core": "^6.26.3",
+    "gh-pages": "^1.2.0"
   }
 }
