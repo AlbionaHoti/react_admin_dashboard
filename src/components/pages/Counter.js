@@ -3,34 +3,36 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {actionCreators} from '../../store/Counter'
 import 'semantic-ui-css/semantic.min.css'
-import {Card, Icon, Image} from 'semantic-ui-react'
+import { Form, Text, Scope } from 'informed'
+import { Card, Icon, Image } from 'semantic-ui-react'
 
-const Counter = props => (
+import { Button, Checkbox } from 'semantic-ui-react'
+
+const CardForm = props => (
     <Card>
-        <Image src='/assets/images/avatar/large/matthew.png'/>
-        <Card.Content>
-            <Card.Header>
-                Matthew
-            </Card.Header>
-            <Card.Meta>
-        <span className='date'>
-          Joined in 2015
-        </span>
-            </Card.Meta>
-            <Card.Description>
-                Matthew is a musician living in Nashville.
-            </Card.Description>
-        </Card.Content>
-        <Card.Content extra>
-            <a>
-                <Icon name='user'/>
-                22 Friends
-            </a>
-        </Card.Content>
+        <Form id="complex-form">
+            <label htmlFor="complex-name">First name:</label>
+            <Text field="name" id="complex-name" />
+            <Scope scope="favorite">
+                <label htmlFor="complex-color">Favorite color:</label>
+                <Text field="color" id="complex-color" />
+                <label htmlFor="complex-food">Favorite food:</label>
+                <Text field="food" id="complex-food" />
+            </Scope>
+            <label htmlFor="complex-friend-0">Friend 1:</label>
+            <Text field="friends[0]" id="complex-friend-0"/>
+            <label htmlFor="complex-friend-1">Friend 2:</label>
+            <Text field="friends[1]" id="complex-friend-1"/>
+            <label htmlFor="complex-friend-2">Friend 3:</label>
+            <Text field="friends[2]" id="complex-friend-2"/>
+            <Button type="submit">
+                Submit
+            </Button>
+        </Form>
     </Card>
 );
 
 export default connect(
     state => state.counter,
     dispatch => bindActionCreators(actionCreators, dispatch)
-)(Counter)
+)(CardForm)
