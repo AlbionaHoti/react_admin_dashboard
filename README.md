@@ -12,6 +12,12 @@ In the project directory, you can run:
 ```
 `npm start`
 
+```
+To start storybook run:
+
+npm run storybook
+```
+
 Project [Demo](http://albionahoti.com/react_admin_dashboard/) 
 
 Author: Albiona Hoti
