@@ -23,8 +23,8 @@ npm run storybook
 
 Author: [Albiona Hoti](https://albionahoti.github.io)
 
-![alt text](https://i.imgur.com/rTXO96K.png)
+![alt text](https://i.imgur.com/UY51o0x.png)
 
 ### Demo Details
 
-![alt text](https://i.imgur.com/KzYwvL5.png)
+![alt text](https://i.imgur.com/3QGk7Fj.png)
