@@ -44,21 +44,21 @@ class SideMenu extends Component {
                     </TextIcon>
                 </Menu.Item>
 
-                <Menu.Item as={Link} to={'/counter'} name='counter' active={activeItem === 'counter'}
+                <Menu.Item as={Link} to={'/card'} name='card' active={activeItem === 'card'}
                            onClick={this.handleItemClick}>
 
                     <TextIcon hideText={this.props.smallMenu} name='time'>
-                        Counter
+                        Card
                     </TextIcon>
                 </Menu.Item>
 
-                <Menu.Item as={Link} to={'/layout'} name='layout' active={activeItem === 'layout'}
+                {/* <Menu.Item as={Link} to={'/layout'} name='layout' active={activeItem === 'layout'}
                            onClick={this.handleItemClick}>
                     <TextIcon hideText={this.props.smallMenu} name='calendar'>
                         Layout
                     </TextIcon>
 
-                </Menu.Item>
+                </Menu.Item> */}
             </Menu>
         )
     }

@@ -46,17 +46,17 @@ export default class VerticalMenu extends Component {
           </Menu.Item>
         </NavLink>
 
-        <NavLink to={"/counter"} exact>
+        <NavLink to={"/card"} exact>
           <Menu.Item
-            name="counter"
-            active={activeItem === "counter"}
+            name="card"
+            active={activeItem === "card"}
             onClick={this.handleItemClick}
           >
-            Counter
+            Card
           </Menu.Item>
         </NavLink>
 
-        <NavLink to={"/layout"} exact>
+        {/* <NavLink to={"/layout"} exact>
           <Menu.Item
             name="layout"
             active={activeItem === "layout"}
@@ -65,7 +65,7 @@ export default class VerticalMenu extends Component {
             <Icon name="home" />
             Layout
           </Menu.Item>
-        </NavLink>
+        </NavLink> */}
       </Menu>
     );
   }

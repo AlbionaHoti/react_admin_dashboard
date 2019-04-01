@@ -8,13 +8,15 @@ export default class Notification extends Component {
   render() {
     return (
       <Popup
+        hoverable
         trigger={<Icon size="large" name="mail outline" color="grey" />}
-        position="bottom right"
+        position='bottom right'
         verticalOffset={18}
         size="small"
-        basic
+        
       >
         <NotificationContent />
+        
       </Popup>
     );
   }

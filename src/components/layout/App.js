@@ -3,16 +3,12 @@ import { Route } from 'react-router'
 import Layout from '.././layout/Layout'
 import Home from '.././pages/Home'
 import UserManagement from '.././pages/UserManagement'
-import CardForm from '.././pages/Counter'
-import FetchData from '.././FetchData'
-import HomepageLayout from '.././pages/HomepageLayout'
+import CardForm from '.././pages/Card'
 
 export default () => (
   <Layout>
     <Route exact path="/" component={Home} />
     <Route path="/userManagement" component={UserManagement} />
-    <Route path="/counter" component={CardForm} />
-    <Route path="/layout" component={HomepageLayout} />
-    <Route path="/fetchdata/:startDateIndex?" component={FetchData} />
+    <Route path="/card" component={CardForm} />
   </Layout>
 );

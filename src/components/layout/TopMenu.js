@@ -64,7 +64,7 @@ class TopMenu extends Component {
               <Image
                 circular
                 size={"mini"}
-                src="https://react.semantic-ui.com/assets/images/avatar/small/nan.jpg"
+                src="https://react.semantic-ui.com/images/avatar/large/jenny.jpg"
               />
               Albiona
             </div>

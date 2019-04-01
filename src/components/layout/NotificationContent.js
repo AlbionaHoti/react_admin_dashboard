@@ -4,7 +4,7 @@ import {
   Button,
   Grid,
   Header,
-  Divider
+  Segment
 } from "semantic-ui-react";
 
 export default class NotificationContent extends Component {
@@ -17,30 +17,30 @@ export default class NotificationContent extends Component {
         button: "More Info"
       },
       {
-        name: "Stevie Feliciano",
-        bio: "Stevie has been a member since August 2013",
+        name: "James Frank",
+        bio: "James has been a member since Sep 2011",
         button: "More Info"
       },
       {
-        name: "Matt",
-        bio: "Matt has been a member since July 2014",
+        name: "Algo Hemil",
+        bio: "Algo has been a member since Nov 2015",
         button: "More Info"
       }
     ];
 
     return (
-        <Grid centered divided rows={3}>
+      <Grid.Column textAlign='center'>
         {patients.map(patient => (
-          <Grid.Row width={4} textAlign="center">
-                <div>
-                  <Header as="h4">{patient.name}</Header>
-                  <p>{patient.bio}</p>
-                  <Button>{patient.button}</Button>
-                  <Divider />
-                </div>
-          </Grid.Row>
-          ))}
-        </Grid>
+
+          <Segment>
+            <Header as='h4'>Basic Plan</Header>
+            <p>
+              {patient.bio}
+            </p>
+            <Button>{patient.button}</Button>
+          </Segment>
+        ))}
+      </Grid.Column>
     );
   }
 }
