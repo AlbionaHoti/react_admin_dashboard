@@ -26,7 +26,7 @@ class TopMenu extends Component {
         <Menu.Item className="logo-space-menu-item">
           <div className="display-inline logo-space">
             <Image src="./logo.png" />
-            <p>Ferexim</p>
+            <p>React Dashboard</p>
           </div>
         </Menu.Item>
 
